@@ -10420,7 +10420,7 @@ if _ctt_view_val == "Call Talk-time Report":
     # Sidebar data source selector (scoped to this view)
     with st.sidebar.expander("Call Talk-time • Data Source", expanded=False):
         st.caption("CSV that contains your call activity export.")
-        _ctt_default = "/mnt/data/activityFeedReport_downloads641023449ff5870ffa44af631759841842.csv"
+        _ctt_default = "activityFeedReport_downloads641023449ff5870ffa44af631759841842.csv"
         _ctt_path = st.text_input("Calls CSV path", value=_ctt_default, key="CTT_calls_csv_path")
 
     # Load calls
