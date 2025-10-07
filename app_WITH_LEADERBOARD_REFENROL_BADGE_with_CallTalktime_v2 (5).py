@@ -10469,10 +10469,10 @@ if _ctt_view_val == "Call Talk-time Report":
     with st.sidebar.expander("Call Talk-time • Data Source", expanded=False):
         import os, glob
         st.caption("CSV that contains your call activity export.")
-        _ctt_default = "/mnt/data/activityFeedReport_downloads641023449ff5870ffa44af631759841842.csv"
+        _ctt_default = "activityFeedReport_downloads641023449ff5870ffa44af631759841842.csv"
         _ctt_path = st.text_input("Calls CSV path", value=_ctt_default, key="CTT_calls_csv_path")
         if not os.path.exists(_ctt_path):
-            candidates = sorted(glob.glob("/mnt/data/*.csv"))
+            candidates = sorted(glob.glob("activityFeedReport_downloads641023449ff5870ffa44af631759841842.csv"))
             if candidates:
                 _pick = st.selectbox("Pick a CSV found in /mnt/data", options=candidates, index=0, key="CTT_pickcsv")
                 if _pick:
